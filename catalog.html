@@ -7,7 +7,6 @@
   </head>
 
   <body>
-
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
@@ -98,14 +97,16 @@
 
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <div class="range-container">
-                <input class="range-container-input" type="number" inputmode="numeric" name="price-range-min" id="price-range-min" min="0" max="12999" minlength="1" maxlength="5" step="1" value="0" >
-                <label class="range-container-label" for="price-range-min">от</label>
-                <input class="range-container-input" type="number" inputmode="numeric" name="price-range-max" id="price-range-max" min="1" max="13000" minlength="1" maxlength="5" step="1" value="9000">
-                <label class="range-container-label" for="price-range-max">до</label>
+              <div class="container-range">
+                <input class="container-range-input" type="number" inputmode="numeric" name="price-range-min" id="price-range-min" min="0" max="12999" step="1" value="0" >
+                <label class="container-range-label" for="price-range-min">от</label>
+                <input class="container-range-input" type="number" inputmode="numeric" name="price-range-max" id="price-range-max" min="1" max="13000" step="1" value="9000">
+                <label class="container-range-label" for="price-range-max">до</label>
               </div>
               <label class="control">
                 <input class="control-range" type="range" name="price-range-min" min="0" max="12999" value="0">
+              </label>
+              <label class="control">
                 <input class="control-range" type="range" name="price-range-max" min="1" max="13000" value="9000">
               </label>
             </fieldset>
@@ -147,8 +148,8 @@
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">От <span class="hotel-card-price-output">4000</span> ₽</p>
             <a class="card-button about-button" href="#">подробнее</a>
-            <button class="card-button fav-button">в избранное</button>
-            <div class="hotel-rating-container">
+            <button class="card-button fav-button" type="button">в избранное</button>
+            <div class="container-hotel-rating">
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -166,8 +167,8 @@
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">От <span class="hotel-card-price-output">5000</span> ₽</p>
             <a class="card-button about-button" href="#">подробнее</a>
-            <button class="card-button fav-button">в избранное</button>
-            <div class="hotel-rating-container">
+            <button class="card-button fav-button" type="button">в избранное</button>
+            <div class="container-hotel-rating">
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -185,8 +186,8 @@
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">От <span class="hotel-card-price-output">2500</span> ₽</p>
             <a class="card-button about-button" href="#">подробнее</a>
-            <button class="card-button fav-button">в избранное</button>
-            <div class="hotel-rating-container">
+            <button class="card-button fav-button" type="button">в избранное</button>
+            <div class="container-hotel-rating">
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -203,8 +204,8 @@
             <p class="hotel-card-type">Гостиница</p>
             <p class="hotel-card-price">От <span class="hotel-card-price-output">2500</span> ₽</p>
             <a class="card-button about-button" href="#">подробнее</a>
-            <button class="card-button fav-button">в избранное</button>
-            <div class="hotel-rating-container">
+            <button class="card-button fav-button" type="button">в избранное</button>
+            <div class="container-hotel-rating">
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -214,6 +215,38 @@
           </li>
         </ul>
 
+        <div class="container-pagination">
+          <p class="visually-hidden">Перейти на страницу</p>
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-button pagination-button-current" href="#">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-button" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-button" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-button" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-button">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-button" href="#">10</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container-card-num">
+          <p>Гостиниц на странице:</p>
+          <select class="control-select">
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+          </select>
+        </div>
       </section>
 
       <section class="subscription subscription-inner">
