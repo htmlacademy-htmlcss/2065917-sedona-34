@@ -122,8 +122,8 @@
       <section class="catalog-content">
         <h2 class="visually-hidden">Результаты поиска гостиниц</h2>
         <p class="catalog-content-text">Найдено гостиниц: <span class="catalog-content-output">38</span></p>
-
-        <select class="control-select" aria-label="Сортировка">
+        <label class="visually-hidden" for="filter-sort">Сортировка</label>
+        <select class="control-select" name="filter-sort" id="filter-sort">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
@@ -251,7 +251,8 @@
 
         <div class="container-card-num">
           <p>Гостиниц на странице:</p>
-          <select class="control-select">
+          <label class="visually-hidden" for="card-quantity">Выберете число отображаемых карточек</label>
+          <select class="control-select" name="card-quantity" id="card-quantity">
             <option value="4">4</option>
             <option value="8">8</option>
             <option value="16">16</option>
@@ -265,7 +266,7 @@
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscription-email">Ваш e-mail: </label>
+          <label class="visually-hidden" for="subscription-email">Укажите Вашу почту</label>
           <input class="subscription-input" type="email" name="subscription-email" id="subscription-email" placeholder="Ваш e-mail" required>
           <button class="subscription-button" type="submit">Подписаться</button>
         </form>
