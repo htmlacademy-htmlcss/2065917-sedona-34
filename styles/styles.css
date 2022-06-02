@@ -57,3 +57,24 @@ body {
   border-radius: 4px;
 }
 
+.lead {
+  text-align: center;
+}
+
+.lead-wrapper {
+  background: url(../images/welcome-background.jpg) #756157 no-repeat;
+  background-size: 100% auto;
+}
+
+.lead-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.lead-text-slogan {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
