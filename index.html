@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона. Главная</title>
-    <link rel="icon" type="image/png" href="images/favicon-16.png">
-    <link rel="icon" type="image/png" href="images/favicon-32.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -29,17 +29,19 @@
             <a class="navigation-link" href="#"><span class="visually-hidden">Избранное </span><span class="navigation-link-counter">12</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+            <a class="navigation-link header-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-index">
-      <section class="lead" style="background-color:burlywood;"> <!-- временно добавил цвет фона, чтобы не потерять изображение -->
+    <main class="main-content">
+      <section class="lead">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-        <img class="lead-slogan" src="/images/welcome-text.svg" width="458" height="352" alt="Welcome to gorgeous Sedona. Because the Grand Canyon sucks!">
-        <p class="lead-text lead-text-bolder">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <div class="lead-wrapper">
+          <img class="lead-slogan" src="images/welcome-text.svg" width="458" height="352" alt="Welcome to gorgeous Sedona. Because the Grand Canyon sucks!">
+        </div>
+        <p class="lead-text-slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="lead-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
 
@@ -94,19 +96,19 @@
         <p class="hotel-search-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="hotel-search-button" href="#">поиск гостиницы в Седоне</a>
       </section>
+    </main>
 
+    <footer class="page-footer">
       <section class="subscription">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscription-email">Ваш e-mail: </label>
+          <label class="visually-hidden" for="subscription-email">Укажите Вашу почту</label>
           <input class="subscription-input" type="email" name="subscription-email" id="subscription-email" placeholder="Ваш e-mail" required>
           <button class="subscription-button" type="submit">Подписаться</button>
         </form>
       </section>
-    </main>
 
-    <footer class="page-footer">
       <h2 class="visually-hidden">Контактная информация</h2>
         <ul class="footer-social-list">
           <li class="social-list-item">
@@ -123,7 +125,7 @@
           <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
         <a class="footer-about-link" href="https://htmlacademy.ru/">
-          <img class="about-logo" src="/images/social-htmlacademy.svg" width="115" height="33" alt="Логотип html academy.">
+          <img class="about-logo" src="images/icons/html-academy-logo.svg" width="115" height="33" alt="Логотип html academy.">
         </a>
     </footer>
   </body>

@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Седона. Гостиницы</title>
-    <link rel="icon" type="image/png" href="images/favicon-16.png">
-    <link rel="icon" type="image/png" href="images/favicon-32.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img class="header-logo" src="/images/sedona-logo.svg" width="139" height="70" alt="Логотип Седоны.">
+          <img class="header-logo" src="images/sedona-logo.svg" width="139" height="70" alt="Логотип Седоны.">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -30,13 +30,13 @@
             <a class="navigation-link" href="#"><span class="visually-hidden">Избранное </span><span class="navigation-link-counter">12</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+            <a class="navigation-link header-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-content">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -123,8 +123,8 @@
       <section class="catalog-content">
         <h2 class="visually-hidden">Результаты поиска гостиниц</h2>
         <p class="catalog-content-text">Найдено гостиниц: <span class="catalog-content-output">38</span></p>
-
-        <select class="control-select" aria-label="Сортировка">
+        <label class="visually-hidden" for="filter-sort">Сортировка</label>
+        <select class="control-select" name="filter-sort" id="filter-sort">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
@@ -145,7 +145,9 @@
         <ul class="hotel-list">
           <li class="hotel-list-item">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="/images/catalog-images/hotel-amara.jpg" width="300" height="211" alt="Ночное небо освещает грот на территории гостиницы Amara Resort & Spa.">
+              <img class="hotel-card-image" src="images/catalog/amara.jpg" width="300" height="211" alt="Ночное небо освещает грот на территории гостиницы Amara Resort & Spa.">
+            </a>
+            <a class="hotel-card-link" href="#">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -153,6 +155,7 @@
             <a class="card-button about-button" href="#">подробнее</a>
             <button class="card-button fav-button" type="button">в избранное</button>
             <div class="container-hotel-rating">
+              <p class="visually-hidden">Количество звезд: <span>4</span></p>
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -164,7 +167,9 @@
           </li>
           <li class="hotel-list-item">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="/images/catalog-images/hotel-villas.jpg" width="300" height="211" alt="Вид на скалы после дождя из окна номера в Villas at Poco Diablo.">
+              <img class="hotel-card-image" src="images/catalog/villas.jpg" width="300" height="211" alt="Вид на скалы после дождя из окна номера в Villas at Poco Diablo.">
+            </a>
+            <a class="hotel-card-link" href="#">
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -172,6 +177,7 @@
             <a class="card-button about-button" href="#">подробнее</a>
             <button class="card-button fav-button" type="button">в избранное</button>
             <div class="container-hotel-rating">
+              <p class="visually-hidden">Количество звезд: <span>4</span></p>
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -183,7 +189,9 @@
           </li>
           <li class="hotel-list-item">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="/images/catalog-images/hotel-desert.jpg" width="300" height="211" alt="Красные горы при въезде на территорию Desert Quail Inn.">
+              <img class="hotel-card-image" src="images/catalog/desert.jpg" width="300" height="211" alt="Красные горы при въезде на территорию Desert Quail Inn.">
+            </a>
+            <a class="hotel-card-link" href="#">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -191,6 +199,7 @@
             <a class="card-button about-button" href="#">подробнее</a>
             <button class="card-button fav-button" type="button">в избранное</button>
             <div class="container-hotel-rating">
+              <p class="visually-hidden">Количество звезд: <span>3</span></p>
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -201,7 +210,9 @@
           </li>
           <li class="hotel-list-item">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="/images/catalog-images/hotel-greentree.jpg" width="300" height="211" alt="Солнце садится за гору возле гостиницы GreenTree Inn.">
+              <img class="hotel-card-image" src="images/catalog/greentree.jpg" width="300" height="211" alt="Солнце садится за гору возле гостиницы GreenTree Inn.">
+            </a>
+            <a class="hotel-card-link" href="#">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
             </a>
             <p class="hotel-card-type">Гостиница</p>
@@ -209,6 +220,7 @@
             <a class="card-button about-button" href="#">подробнее</a>
             <button class="card-button fav-button" type="button">в избранное</button>
             <div class="container-hotel-rating">
+              <p class="visually-hidden">Количество звезд: <span>2</span></p>
               <ul class="rating-star-list">
                 <li class="star-item"></li>
                 <li class="star-item"></li>
@@ -240,26 +252,27 @@
 
         <div class="container-card-num">
           <p>Гостиниц на странице:</p>
-          <select class="control-select">
+          <label class="visually-hidden" for="card-quantity">Выберете число отображаемых карточек</label>
+          <select class="control-select" name="card-quantity" id="card-quantity">
             <option value="4">4</option>
             <option value="8">8</option>
             <option value="16">16</option>
           </select>
         </div>
       </section>
+    </main>
 
+    <footer class="page-footer">
       <section class="subscription subscription-inner">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscription-email">Ваш e-mail: </label>
+          <label class="visually-hidden" for="subscription-email">Укажите Вашу почту</label>
           <input class="subscription-input" type="email" name="subscription-email" id="subscription-email" placeholder="Ваш e-mail" required>
           <button class="subscription-button" type="submit">Подписаться</button>
         </form>
       </section>
-    </main>
 
-    <footer class="page-footer">
       <h2 class="visually-hidden">Контактная информация</h2>
         <ul class="footer-social-list">
           <li class="social-list-item">
@@ -276,7 +289,7 @@
           <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
         <a class="footer-about-link" href="https://htmlacademy.ru/">
-          <img class="about-logo" src="/images/social-htmlacademy.svg" width="115" height="33" alt="Логотип html academy.">
+          <img class="about-logo" src="images/icons/html-academy-logo.svg" width="115" height="33" alt="Логотип html academy.">
         </a>
     </footer>
   </body>
