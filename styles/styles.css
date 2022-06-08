@@ -14,7 +14,12 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -23,6 +28,14 @@ body {
   font-weight: 400;
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -52,8 +65,26 @@ body {
   background: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  margin: 0 70px;
+}
+
+.header-logo {
+  display: block;
+  margin-right: 30px;
+}
+
 .navigation-list {
+  width: 500px;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.navigation-list.navigation-user {
+  width: 350px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -89,19 +120,16 @@ body {
   background-color: #756157;
 }
 
-.main-content {
-  background-color: #ffffff;
-}
-
 .page-footer {
   background: #ffffff;
 }
 
 .subscription {
+  padding-top: 94px;
   text-align: center;
   color: #ffffff;
   background: url("../images/subscribe-background.jpg") #2d4247 center no-repeat;
-  background-size: 100% auto;
+  background-size: cover ;
 }
 
 .subscription.subscription-catalog {
@@ -110,6 +138,7 @@ body {
 }
 
 .subscription-title {
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -117,6 +146,9 @@ body {
 }
 
 .subscription-text {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -126,7 +158,17 @@ body {
   color: #333333;
 }
 
+.subscription-form {
+  display: flex;
+  justify-content: center;
+}
+
 .subscription-input {
+  display: block;
+  box-sizing: border-box;
+  width: 600px;
+  height: 60px;
+  margin-bottom: 94px;
   font-family: inherit;
   background-color: #f2f2f2;
   border: none;
@@ -142,11 +184,18 @@ body {
 }
 
 .subscription-button {
+  width: 200px;
+  height: 60px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82b3d3;
   border-radius: 0px 10px 10px 0px;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
 }
 
 .footer-social-list {
@@ -188,13 +237,39 @@ body {
   color: #000000;
 }
 
+.main-content {
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
 .lead-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 485px;
+  padding-top: 51px;
+  padding-bottom: 82px;
+  margin-bottom: 63px;
   text-align: center;
-  background: url("../images/welcome-background.jpg") #2d4247 center no-repeat;
-  background-size: 100% auto;
+  background-image: url("../images/welcome-mask.svg"), url("../images/welcome-background.jpg");
+  background-color: #2d4247;
+  background-position: bottom, top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, cover;
+}
+
+.lead-banner {
+  margin: 0;
+  padding: 0;
+}
+
+.lead p {
+  width: 670px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lead-slogan {
+  margin-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -203,6 +278,7 @@ body {
 }
 
 .lead-text {
+  margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -229,7 +305,7 @@ body {
 
 .accent-odd::after {
   content: "";
-  display: inline-block;
+  display: block;
   width: 800px;
   height: 384px;
   background: url("../images/town.jpg") center no-repeat;
@@ -237,16 +313,22 @@ body {
 
 .accent-even::before {
   content: "";
-  display: inline-block;
+  display: block;
   width: 800px;
   height: 384px;
   background: url("../images/canyon.jpg") center no-repeat;
 }
 
-.advantages-list-icons,
-.advantages-list-numbers {
+.advantages-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-align: center;
+}
+
+.advantages-item {
+  width: 400px;
 }
 
 .advantages-title {
@@ -293,11 +375,14 @@ body {
 }
 
 .hotel-search {
+  padding-top: 91px;
+  padding-bottom: 93px;
   text-align: center;
-  align-items: center;
 }
 
 .hotel-search-title {
+  margin: 0;
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -305,6 +390,9 @@ body {
 }
 
 .hotel-search-text {
+  width: 650px;
+  margin: 0 auto;
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -312,11 +400,13 @@ body {
 }
 
 .hotel-search-button {
+  box-sizing: border-box;
   display: inline-block;
-  width: 574px;
+  min-width: 574px;
   height: 60px;
+  padding: 12px 15px;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 36px;
   text-decoration: none;
   background-color: #756157;
 }
