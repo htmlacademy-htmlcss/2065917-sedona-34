@@ -14,7 +14,12 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -38,6 +43,14 @@ body {
   overflow: hidden;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
 .button {
   font-family: inherit;
   font-weight: 700;
@@ -52,8 +65,27 @@ body {
   background: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  display: block;
+  margin-right: 30px;
+}
+
 .navigation-list {
+  width: 500px;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.navigation-list.navigation-user {
+  width: 350px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -80,17 +112,15 @@ body {
  }
 
 .header-button {
-  display: block;
-  width: 160px;
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 160px;
   height: 37px;
+  padding: 9px 15px 8px 15px;
   font-size: 16px;
-  line-height: 37px;
+  line-height: 20px;
   text-decoration: none;
   background-color: #756157;
-}
-
-.main-content {
-  background-color: #ffffff;
 }
 
 .page-footer {
@@ -98,10 +128,11 @@ body {
 }
 
 .subscription {
+  padding-top: 94px;
   text-align: center;
   color: #ffffff;
   background: url("../images/subscribe-background.jpg") #2d4247 center no-repeat;
-  background-size: 100% auto;
+  background-size: cover ;
 }
 
 .subscription.subscription-catalog {
@@ -110,6 +141,7 @@ body {
 }
 
 .subscription-title {
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -117,6 +149,9 @@ body {
 }
 
 .subscription-text {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -126,11 +161,21 @@ body {
   color: #333333;
 }
 
+.subscription-form {
+  display: flex;
+  justify-content: center;
+}
+
 .subscription-input {
+  display: block;
+  box-sizing: border-box;
+  width: 600px;
+  height: 60px;
+  margin-bottom: 94px;
   font-family: inherit;
   background-color: #f2f2f2;
   border: none;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .subscription-input::placeholder {
@@ -142,11 +187,19 @@ body {
 }
 
 .subscription-button {
+  width: 200px;
+  height: 60px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82b3d3;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .footer-social-list {
@@ -188,13 +241,49 @@ body {
   color: #000000;
 }
 
+.about-logo {
+  display: block;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+/* index */
+
 .lead-wrapper {
-  text-align: center;
-  background: url("../images/welcome-background.jpg") #2d4247 center no-repeat;
-  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/welcome-background.jpg");
+  background-color: #2d4247;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lead-banner {
+  display: block;
+  margin: 51px auto 25px auto;
+}
+
+.lead-wrapper::after {
+  content: "";
+  display: block;
+  width: 1200px;
+  height: 57px;
+  background: url("../images/welcome-mask.svg") center no-repeat;
+}
+
+.lead-slogan,
+.lead-text {
+  width: 670px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lead-slogan {
+  margin-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -203,6 +292,7 @@ body {
 }
 
 .lead-text {
+  margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -211,11 +301,18 @@ body {
 }
 
 .advantages {
+  display: flex;
+  flex-wrap: wrap;
   background: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-accent {
+.advantages-item-wrapper {
+  width: 400px;
   text-align: center;
+}
+
+.advantages-accent {
+  display: flex;
   color: #ffffff;
   background: #82b3d3;
 }
@@ -229,7 +326,7 @@ body {
 
 .accent-odd::after {
   content: "";
-  display: inline-block;
+  display: block;
   width: 800px;
   height: 384px;
   background: url("../images/town.jpg") center no-repeat;
@@ -237,14 +334,17 @@ body {
 
 .accent-even::before {
   content: "";
-  display: inline-block;
+  display: block;
   width: 800px;
   height: 384px;
   background: url("../images/canyon.jpg") center no-repeat;
 }
 
-.advantages-list-icons,
-.advantages-list-numbers {
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-align: center;
 }
@@ -266,6 +366,10 @@ body {
 
 .advantages-accent-dark {
   background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item {
+  width: 400px;
 }
 
 .advantages-item.housing::before {
@@ -293,11 +397,14 @@ body {
 }
 
 .hotel-search {
+  padding-top: 91px;
+  padding-bottom: 93px;
   text-align: center;
-  align-items: center;
 }
 
 .hotel-search-title {
+  margin: 0;
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -305,6 +412,9 @@ body {
 }
 
 .hotel-search-text {
+  width: 650px;
+  margin: 0 auto;
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -312,28 +422,38 @@ body {
 }
 
 .hotel-search-button {
+  box-sizing: border-box;
   display: inline-block;
-  width: 574px;
+  min-width: 574px;
   height: 60px;
+  padding: 12px 15px;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 36px;
   text-decoration: none;
   background-color: #756157;
 }
 
+/* catalog */
+
 .catalog-header {
+  margin: 0;
+  padding: 70px;
+  padding-top: 35px;
   color: #ffffff;
   background: url("../images/filter-background.jpg") #2d4247 center no-repeat;
-  background-size: auto 100%;
+  background-size: 100% auto;
 }
 
 .catalog-title {
+  margin: 0;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
 }
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-size: 16px;
   line-height: 21px;
@@ -356,7 +476,20 @@ body {
   background: url("../images/icons/breadcrumbs-arrow.svg") center no-repeat;
 }
 
+.catalog-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-column-left,
+.filter-column-right {
+  display: flex;
+}
+
 .catalog-filter-group {
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
   border: none;
 }
 
@@ -367,7 +500,15 @@ body {
 }
 
 .catalog-filter-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.button-accept,
+.button-reset {
+  display: block;
+  margin: 0 auto;
 }
 
 .button-accept {
@@ -383,6 +524,17 @@ body {
   font-weight: 400;
   text-transform: capitalize;
   background-color: transparent;
+}
+
+.catalog-content {
+  margin: 0;
+  padding-left: 73px;
+  padding-right: 71px;
+}
+
+.search-layout {
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-content-text {
@@ -437,6 +589,11 @@ body {
 }
 
 .hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  grid-gap: 18px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -492,12 +649,21 @@ body {
   background: url("../images/icons/star.svg") center no-repeat;
 }
 
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .pagination-button {
   display: block;
+  margin-right: 8px;
   width: 60px;
   height: 60px;
   font-size: 20px;
