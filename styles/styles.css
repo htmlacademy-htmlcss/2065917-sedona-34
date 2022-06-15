@@ -73,11 +73,16 @@ body {
 }
 
 .header-logo {
+  position: relative;
+  z-index: 1;
   display: block;
+  margin-bottom: -5px;
   margin-right: 30px;
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 500px;
   margin: 0;
   padding: 0;
@@ -85,11 +90,23 @@ body {
 }
 
 .navigation-list.navigation-user {
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   width: 350px;
   margin-left: auto;
 }
 
+.navigation-item {
+  position: relative;
+  z-index: 1;
+  padding: 0 17px;
+  margin-bottom: -1px;
+}
+
 .navigation-link {
+  display: block;
+  padding: 20px 0;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -98,14 +115,47 @@ body {
   color: #000000;
  }
 
+ .navigation-current {
+  border-bottom: 2px solid #756157;
+ }
+
+ .navigation-user .navigation-item {
+  padding: 0;
+ }
+
+ .navigation-user .navigation-link {
+  box-sizing: border-box;
+  width: 42px;
+  height: 66px;
+  margin: 0;
+  padding: 0;
+ }
+
+.navigation-search {
+  background-image: url("../images/icons/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation-favorites {
+  background-image: url("../images/icons/favorite.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
  .favorites-counter {
+  position: relative;
+  top: 15px;
+  left: 24px;
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
+  padding: 2.5px 0.47px 4.5px;
   font-size: 10px;
-  line-height: 20px;
+  line-height: 13px;
   font-weight: 400;
-  letter-spacing: -1px;
+  letter-spacing: -10%;
   text-align: center;
   color: #ffffff;
   background-color: #7db54f;
@@ -113,11 +163,11 @@ body {
  }
 
 .header-button {
+  display: block;
   box-sizing: border-box;
-  display: inline-block;
   min-width: 160px;
-  height: 37px;
-  padding: 9px 15px 8px 15px;
+  margin-left: 20px;
+  padding: 9px 15px 8px;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
@@ -197,15 +247,28 @@ body {
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
+  grid-gap: 20px;
   padding: 40px 70px 30px;
 
 }
 
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-align: center;
+}
+
+.social-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 50px;
 }
 
 .footer-social-list .vk::after {
@@ -232,6 +295,13 @@ body {
   background: url("../images/icons/youtube.svg") center no-repeat;
 }
 
+.footer-phone {
+  /* display: block; */
+  justify-self: center;
+  align-self: center;
+
+}
+
 .footer-phone-link {
   font-style: normal;
   font-size: 40px;
@@ -240,6 +310,11 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-about-link {
+  justify-self: end;
+  align-self: center;
 }
 
 .about-logo {
