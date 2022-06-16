@@ -670,7 +670,7 @@ body {
   text-transform: uppercase;
 }
 
-.control-select {
+.search-layout .control-select {
   width: 290px;
   margin-right: 78px;
   font-family: inherit;
@@ -793,7 +793,6 @@ body {
 
 .pagination {
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -817,5 +816,19 @@ body {
 }
 
 .container-card-num {
+  display: flex;
   color: #333333;
+}
+
+.container-card-num .control-select {
+  width: 160px;
+  margin-left: 51px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
