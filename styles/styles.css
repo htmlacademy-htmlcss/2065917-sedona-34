@@ -247,16 +247,16 @@ body {
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: 3fr 4fr 3fr;
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 40px 70px 30px;
-
 }
 
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  width: 300px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -296,10 +296,8 @@ body {
 }
 
 .footer-phone {
-  /* display: block; */
-  justify-self: center;
-  align-self: center;
-
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .footer-phone-link {
@@ -313,12 +311,12 @@ body {
 }
 
 .footer-about-link {
-  justify-self: end;
-  align-self: center;
+  width: 300px;
 }
 
 .about-logo {
   display: block;
+  margin-left: auto;
 }
 
 .main-content {
