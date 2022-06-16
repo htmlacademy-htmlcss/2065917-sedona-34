@@ -644,7 +644,7 @@ body {
   display: block;
   min-width: 160px;
   margin: 0;
-  padding: 0px 15px;
+  padding: 0 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -663,6 +663,7 @@ body {
 
 .catalog-content-text {
   margin: 0;
+  margin-right: auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -670,6 +671,8 @@ body {
 }
 
 .control-select {
+  width: 290px;
+  margin-right: 78px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -681,9 +684,14 @@ body {
 }
 
 .layout-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.layout-button-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .layout-button {
@@ -700,17 +708,17 @@ body {
 
 .layout-button.button-tile {
   content: "";
-  background: url("../images/icons/icon-tile.svg") center no-repeat;
+  background: url("../images/icons/icon-tile.svg") center/auto no-repeat;
 }
 
 .layout-button.button-gallery {
   content: "";
-  background: url("../images/icons/icon-gallery.svg") center no-repeat;
+  background: url("../images/icons/icon-gallery.svg") center/auto no-repeat;
 }
 
 .layout-button.button-list {
   content: "";
-  background: url("../images/icons/icon-list.svg") center no-repeat;
+  background: url("../images/icons/icon-list.svg") center/auto no-repeat;
 }
 
 .hotel-list {
