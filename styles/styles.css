@@ -350,7 +350,7 @@ body {
 }
 
 .lead-text-wrapper {
-  padding: 64px 200px 90px;
+  padding: 63px 200px 90px;
 }
 
 .lead-slogan,
@@ -383,13 +383,15 @@ body {
 
 .advantages-item-wrapper {
   width: 400px;
+  color: #ffffff;
   text-align: center;
+  background: #82b3d3;
 }
 
 .advantages-accent {
   display: flex;
-  color: #ffffff;
-  background: #82b3d3;
+  /* color: #ffffff;
+  background: #82b3d3; */
 }
 
 .advantages-title {
