@@ -544,13 +544,18 @@ body {
 
 .catalog-title {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style: none;
   font-size: 16px;
@@ -563,7 +568,17 @@ body {
   display: block;
   width: 12px;
   height: 12px;
-  background: url("../images/icons/breadcrumbs-home.svg") center no-repeat;
+  background: url("../images/icons/breadcrumbs-home.svg") center/cover no-repeat;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.breadcrumbs-link {
+  margin-right: 10px;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
@@ -571,7 +586,7 @@ body {
   display: block;
   width: 6px;
   height: 8px;
-  background: url("../images/icons/breadcrumbs-arrow.svg") center no-repeat;
+  background: url("../images/icons/breadcrumbs-arrow.svg") center/cover no-repeat;
 }
 
 .catalog-form {
@@ -584,6 +599,10 @@ body {
   display: flex;
 }
 
+.filter-buttons {
+  align-self: flex-end;
+}
+
 .catalog-filter-group {
   margin: 0;
   margin-right: 70px;
@@ -592,6 +611,7 @@ body {
 }
 
 .catalog-filter-title {
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -603,13 +623,17 @@ body {
   list-style: none;
 }
 
-.button-accept,
-.button-reset {
+.catalog-filter-item:not(:last-child) {
   display: block;
-  margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .button-accept {
+  display: block;
+  min-width: 160px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 14px 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -617,6 +641,10 @@ body {
 }
 
 .button-reset {
+  display: block;
+  min-width: 160px;
+  margin: 0;
+  padding: 0px 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
