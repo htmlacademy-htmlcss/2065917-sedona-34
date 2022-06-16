@@ -461,11 +461,11 @@ body {
 }
 
 .icons-list .advantages-item {
-  padding: 80px 85px 81px;
+  padding: 80px 75px 81px;
 }
 
 .numbers-list .advantages-item {
-  padding: 103px 85px 102px;
+  padding: 103px 75px 102px;
 }
 
 .advantages-item.housing::before {
