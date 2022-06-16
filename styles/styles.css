@@ -166,6 +166,7 @@ body {
   display: block;
   box-sizing: border-box;
   min-width: 160px;
+  margin: 14px;
   margin-left: 20px;
   padding: 9px 15px 8px;
   font-size: 16px;
@@ -182,8 +183,7 @@ body {
   padding: 94px 200px;
   text-align: center;
   color: #ffffff;
-  background: url("../images/subscribe-background.jpg") #2d4247 center no-repeat;
-  background-size: cover ;
+  background: url("../images/subscribe-background.jpg") #2d4247 center/cover no-repeat;
 }
 
 .subscription.subscription-catalog {
@@ -222,7 +222,6 @@ body {
   display: block;
   box-sizing: border-box;
   width: 600px;
-  height: 60px;
   font-family: inherit;
   background-color: #f2f2f2;
   border: none;
@@ -239,7 +238,7 @@ body {
 
 .subscription-button {
   width: 200px;
-  height: 60px;
+  padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82b3d3;
@@ -382,7 +381,10 @@ body {
 }
 
 .advantages-item-wrapper {
+  box-sizing: border-box;
   width: 400px;
+  min-height: 384px;
+  padding: 92px 85px;
   color: #ffffff;
   text-align: center;
   background: #82b3d3;
@@ -390,31 +392,22 @@ body {
 
 .advantages-accent {
   display: flex;
-  /* color: #ffffff;
-  background: #82b3d3; */
-}
-
-.advantages-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .accent-odd::after {
   content: "";
   display: block;
   width: 800px;
-  height: 384px;
-  background: url("../images/town.jpg") center no-repeat;
+  height: auto;
+  background: url("../images/town.jpg") center/cover no-repeat;
 }
 
 .accent-even::before {
   content: "";
   display: block;
   width: 800px;
-  height: 384px;
-  background: url("../images/canyon.jpg") center no-repeat;
+  height: auto;
+  background: url("../images/canyon.jpg") center/cover no-repeat;
 }
 
 .advantages-list {
@@ -427,14 +420,30 @@ body {
 }
 
 .advantages-title {
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
+.advantages-num {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
 .advantages-text {
+  margin: 0;
+  padding: 0;
   color: #333333;
+}
+
+.advantages-text.accent-text {
+  color: inherit;
 }
 
 .advantages-accent-bright {
@@ -446,7 +455,17 @@ body {
 }
 
 .advantages-item {
+  box-sizing: border-box;
   width: 400px;
+  min-height: 384px;
+}
+
+.icons-list .advantages-item {
+  padding: 80px 85px 81px;
+}
+
+.numbers-list .advantages-item {
+  padding: 103px 85px 102px;
 }
 
 .advantages-item.housing::before {
@@ -454,6 +473,7 @@ body {
   display: block;
   width: 100%;
   height: 72px;
+  margin-bottom: 30px;
   background: url("../images/icons/housing.svg") center no-repeat;
 }
 
@@ -461,7 +481,8 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 70px;
+  height: 72px;
+  margin-bottom: 30px;
   background: url("../images/icons/food.svg") center no-repeat;
 }
 
@@ -469,7 +490,8 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 76px;
+  height: 72px;
+  margin-bottom: 30px;
   background: url("../images/icons/souvenirs.svg") center no-repeat;
 }
 
@@ -503,7 +525,6 @@ body {
   box-sizing: border-box;
   display: inline-block;
   min-width: 574px;
-  height: 60px;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
