@@ -636,7 +636,7 @@ body {
   display: block;
   min-width: 160px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding: 14px 15px;
   font-size: 16px;
   line-height: 20px;
@@ -645,10 +645,12 @@ body {
 }
 
 .button-reset {
+  box-sizing: border-box;
   display: block;
-  min-width: 160px;
-  margin: 0;
-  padding: 0 15px;
+  min-width: 100px;
+  min-height: 32px;
+  margin: 0 auto;
+  padding: 4px 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
