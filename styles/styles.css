@@ -547,6 +547,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
+  margin-left: 2px;
   margin-bottom: 40px;
   padding: 0;
   list-style: none;
@@ -608,6 +609,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .catalog-filter-list {
@@ -619,6 +621,16 @@ body {
 .catalog-filter-item:not(:last-child) {
   display: block;
   margin-bottom: 15px;
+}
+
+.control-checkbox {
+  margin: 0;
+  padding: 0;
+}
+
+.control-radio {
+  margin: 0;
+  padding: 0;
 }
 
 .button-accept {
@@ -648,7 +660,7 @@ body {
 }
 
 .catalog-content {
-  padding: 55px 71px 25px 73px;
+  padding: 53px 71px 25px 73px;
 }
 
 .search-layout {
@@ -669,7 +681,7 @@ body {
 .search-layout .control-select {
   width: 290px;
   margin-right: 78px;
-  padding: 12px 18px;
+  padding: 12px 14px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -725,7 +737,7 @@ body {
   grid-gap: 0 18px;
   margin: 0;
   padding: 0;
-  padding-bottom: 66px;
+  padding-bottom: 65px;
   list-style: none;
   border-bottom: solid 1px #e6e6e6;
 }
@@ -843,13 +855,15 @@ body {
 
 .container-card-num {
   display: flex;
+  align-items: center;
   color: #333333;
 }
 
 .container-card-num .control-select {
+  box-sizing: border-box;
   width: 160px;
   margin-left: 51px;
-  padding: 12px 18px;
+  padding: 12px 14px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
