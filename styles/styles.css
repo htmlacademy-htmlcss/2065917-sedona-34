@@ -63,13 +63,12 @@ body {
 }
 
 .page-header {
+  padding: 0 70px;
   background: #ffffff;
 }
 
 .navigation {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
 }
 
 .header-logo {
@@ -82,7 +81,6 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
   width: 500px;
   margin: 0;
   padding: 0;
@@ -105,6 +103,7 @@ body {
 }
 
 .navigation-link {
+  box-sizing: border-box;
   display: block;
   padding: 20px 0 18px;
   font-size: 20px;
@@ -121,12 +120,13 @@ body {
 
  .navigation-user .navigation-item {
   padding: 0;
+  margin: 0;
  }
 
  .navigation-user .navigation-link {
   box-sizing: border-box;
   width: 42px;
-  height: 66px;
+  height: 65px;
   margin: 0;
   padding: 0;
  }
@@ -155,7 +155,7 @@ body {
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
-  letter-spacing: -10%;
+  letter-spacing: -0.1em;
   text-align: center;
   color: #ffffff;
   background-color: #7db54f;
@@ -166,7 +166,6 @@ body {
   display: block;
   box-sizing: border-box;
   min-width: 160px;
-  margin: 14px;
   margin-left: 20px;
   padding: 9px 15px 8px;
   font-size: 16px;
@@ -220,8 +219,8 @@ body {
 
 .subscription-input {
   display: block;
-  box-sizing: border-box;
   width: 600px;
+  padding-left: 22px;
   font-family: inherit;
   background-color: #f2f2f2;
   border: none;
@@ -237,7 +236,7 @@ body {
 }
 
 .subscription-button {
-  width: 200px;
+  min-width: 200px;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
@@ -247,9 +246,8 @@ body {
 
 .footer-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 40px 70px 30px;
+  padding: 45px 70px 35px;
 }
 
 .footer-social-list {
@@ -266,8 +264,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 47px;
-  height: 50px;
+  width: 48px;
+  height: 40px;
+}
+
+.social-button {
+  padding: 5px 7px;
 }
 
 .footer-social-list .vk::after {
@@ -295,8 +297,8 @@ body {
 }
 
 .footer-phone {
-  padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: 236px;
 }
 
 .footer-phone-link {
@@ -307,15 +309,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-}
-
-.footer-about-link {
-  width: 300px;
-}
-
-.about-logo {
-  display: block;
-  margin-left: auto;
 }
 
 .main-content {
@@ -420,8 +413,8 @@ body {
 }
 
 .advantages-title {
-  width: 150px;
-  margin: 0 auto;
+  width: 180px;
+  margin: auto;
   margin-bottom: 30px;
   padding: 0;
   font-size: 24px;
@@ -431,8 +424,7 @@ body {
 }
 
 .advantages-num {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: auto 0 30px;
   padding: 0;
 }
 
@@ -456,6 +448,8 @@ body {
 
 .advantages-item {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   width: 400px;
   min-height: 384px;
 }
@@ -472,33 +466,28 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 72px;
-  margin-bottom: 30px;
-  background: url("../images/icons/housing.svg") center no-repeat;
+  height: 76px;
+  background: url("../images/icons/housing.svg") center/auto no-repeat;
 }
 
 .advantages-item.food::before {
   content: "";
   display: block;
   width: 100%;
-  height: 72px;
-  margin-bottom: 30px;
-  background: url("../images/icons/food.svg") center no-repeat;
+  height: 76px;
+  background: url("../images/icons/food.svg") center/auto no-repeat;
 }
 
 .advantages-item.souvenirs::before {
   content: "";
   display: block;
   width: 100%;
-  height: 72px;
-  margin-bottom: 30px;
-  background: url("../images/icons/souvenirs.svg") center no-repeat;
+  height: 76px;
+  background: url("../images/icons/souvenirs.svg") center/auto no-repeat;
 }
 
 .hotel-search {
   padding: 91px 200px 93px;
-  /* padding-top: 91px; */
-  /* padding-bottom: 93px; */
   text-align: center;
 }
 
@@ -539,7 +528,7 @@ body {
   padding-top: 35px;
   color: #ffffff;
   background: url("../images/filter-background.jpg") #2d4247 center no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .catalog-title {
@@ -555,6 +544,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
+  margin-left: 2px;
   margin-bottom: 40px;
   padding: 0;
   list-style: none;
@@ -594,27 +584,31 @@ body {
   justify-content: space-between;
 }
 
-.filter-column-left,
-.filter-column-right {
-  display: flex;
+.filter-column-left {
+  display: grid;
+  grid-template-columns: min-content minmax(auto, 150px);
+  grid-gap: 70px;
 }
 
-.filter-buttons {
-  align-self: flex-end;
+.filter-column-right {
+  display: grid;
+  grid-template-columns: auto 160px;
+  grid-gap: 70px;
 }
 
 .catalog-filter-group {
   margin: 0;
-  margin-right: 70px;
   padding: 0;
   border: none;
 }
 
 .catalog-filter-title {
   margin-bottom: 30px;
+  padding: 0;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .catalog-filter-list {
@@ -628,11 +622,27 @@ body {
   margin-bottom: 15px;
 }
 
+.control-checkbox {
+  margin: 0;
+  padding: 0;
+}
+
+.control-radio {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
 .button-accept {
   display: block;
   min-width: 160px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding: 14px 15px;
   font-size: 16px;
   line-height: 20px;
@@ -641,10 +651,13 @@ body {
 }
 
 .button-reset {
+  box-sizing: border-box;
   display: block;
-  min-width: 160px;
-  margin: 0;
-  padding: 0 15px;
+  min-width: 100px;
+  min-height: 32px;
+  margin: 0 auto;
+  margin-bottom: -5px;
+  padding: 4px 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -653,11 +666,12 @@ body {
 }
 
 .catalog-content {
-  padding: 55px 71px 25px 73px;
+  padding: 53px 71px 25px 73px;
 }
 
 .search-layout {
   display: flex;
+  align-items: center;
   margin-bottom: 56px;
 }
 
@@ -673,6 +687,7 @@ body {
 .search-layout .control-select {
   width: 290px;
   margin-right: 78px;
+  padding: 12px 14px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -685,17 +700,20 @@ body {
 
 .layout-list {
   display: flex;
+  flex-wrap: wrap;
+  width: 160px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.layout-button-item:not(:last-child) {
+.layout-button-item:not(:nth-child(3n)) {
   margin-right: 8px;
 }
 
 .layout-button {
   display: block;
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
@@ -724,20 +742,37 @@ body {
 .hotel-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  grid-gap: 18px;
+  grid-gap: 0 18px;
   margin: 0;
   padding: 0;
-  padding-bottom: 66px;
+  padding-bottom: 65px;
   list-style: none;
   border-bottom: solid 1px #e6e6e6;
 }
 
+.hotel-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px 20px;
+  align-items: center;
+  padding: 20px;
+}
+
 .hotel-card-link {
+  display: block;
+  grid-column: 1/-1;
   text-decoration: none;
   color: #000000;
 }
 
+.hotel-card-image {
+  display: block;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
 .hotel-card-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -745,16 +780,18 @@ body {
 
 .hotel-card-type,
 .hotel-card-price {
+  margin: 0;
   color: #333333;
 }
 
 .card-button {
   display: block;
-  width: 140px;
-  height: 37px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 9px 5px 8px;
   font-style: normal;
   font-size: 16px;
-  line-height: 37px;
+  line-height: 20px;
   font-weight: 700;
 }
 
@@ -767,6 +804,10 @@ body {
   background-color: #82b3d3;
 }
 
+.fav-button-selected {
+  background-color: #7db54f;
+}
+
 .rating-button {
   font-weight: 400;
   color: #333333;
@@ -774,6 +815,9 @@ body {
 }
 
 .rating-star-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -781,12 +825,14 @@ body {
   content: "";
   width: 18px;
   height: 17px;
+  margin-right: 6px;
   background: url("../images/icons/star.svg") center no-repeat;
 }
 
 .pagination-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -817,12 +863,15 @@ body {
 
 .container-card-num {
   display: flex;
+  align-items: center;
   color: #333333;
 }
 
 .container-card-num .control-select {
+  box-sizing: border-box;
   width: 160px;
   margin-left: 51px;
+  padding: 12px 14px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
