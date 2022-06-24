@@ -297,13 +297,11 @@ body {
 }
 
 .footer-phone {
-  flex-shrink: 0;
   margin: 0 auto;
-  width: 400px;
-  text-align: center;
 }
 
 .footer-phone-link {
+  padding: 10px;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
