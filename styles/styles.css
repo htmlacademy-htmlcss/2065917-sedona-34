@@ -60,6 +60,7 @@ body {
   color: #ffffff;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .page-header {
@@ -98,14 +99,13 @@ body {
 .navigation-item {
   position: relative;
   display: block;
-  padding: 0 17px;
-  margin-bottom: -1px;
 }
 
 .navigation-link {
+  position: relative;
   box-sizing: border-box;
   display: block;
-  padding: 20px 0 18px;
+  padding: 20px 17px 19px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -114,8 +114,15 @@ body {
   color: #000000;
  }
 
- .navigation-current {
-  border-bottom: 2px solid #756157;
+ .navigation-current::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 17px;
+  right: 17px;
+  bottom: -1px;
+  height: 2px;
+  background-color: #756157;
  }
 
  .navigation-user .navigation-item {
@@ -253,14 +260,13 @@ body {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  /* width: 300px; */
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
 
-.social-list-item {
+.social-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,11 +274,23 @@ body {
   height: 40px;
 }
 
-.social-button {
-  padding: 5px 7px;
+.social-button-icon {
+  fill: #83b3d3
 }
 
-.footer-social-list .vk::after {
+.social-button:hover .social-button-icon {
+  fill: #68a2ca;
+}
+
+.social-button:focus .social-button-icon {
+  fill: #68a2ca;
+}
+
+.social-button:active .social-button-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+/* .footer-social-list .vk::after {
   content: "";
   display: block;
   width: 24px;
@@ -294,7 +312,7 @@ body {
   width: 24px;
   height: 20px;
   background: url("../images/icons/youtube.svg") center no-repeat;
-}
+} */
 
 .footer-phone {
   margin: 0 auto;
@@ -309,6 +327,31 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-phone-link:hover,
+:focus {
+  color: #756157;
+}
+
+.footer-phone-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.about-logo {
+  fill: #000000;
+}
+
+.footer-about-link:hover .about-logo {
+  fill: #756157;
+}
+
+.footer-about-link:focus .about-logo {
+  fill: #756157;
+}
+
+.footer-about-link:active .about-logo {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .main-content {
@@ -553,9 +596,7 @@ body {
   font-weight: 400;
 }
 
-.breadcrumbs-item:first-child .breadcrumbs-link::after {
-  content: "";
-  display: block;
+.breadcrumbs-item:first-child .breadcrumbs-link {
   width: 12px;
   height: 12px;
   background: url("../images/icons/breadcrumbs-home.svg") center/cover no-repeat;
@@ -812,6 +853,7 @@ body {
   font-weight: 400;
   color: #333333;
   background-color: #f2f2f2;
+  cursor: default;
 }
 
 .rating-star-list {
