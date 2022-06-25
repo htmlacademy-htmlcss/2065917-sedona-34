@@ -748,6 +748,22 @@ body {
   background-color: #82b3d3;
 }
 
+.button-accept:hover {
+  background-color: #68A2CA;
+}
+
+.button-accept:focus {
+  background-color: #68A2CA;
+}
+
+.button-accept:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-accept:disabled {
+  background-color: #e5e5e5;
+}
+
 .button-reset {
   box-sizing: border-box;
   display: block;
@@ -761,6 +777,23 @@ body {
   font-weight: 400;
   text-transform: capitalize;
   background-color: transparent;
+}
+
+.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button-reset:focus {
+  outline: 2px solid #83b3d3;
+}
+
+
+.button-reset:active {
+  opacity: 0.3;
+}
+
+.button-reset:disabled {
+  opacity: 0.3;
 }
 
 .catalog-content {
@@ -910,12 +943,60 @@ body {
   background-color: #756157;
 }
 
+.about-button:hover {
+  background-color: #615048;
+}
+
+.about-button:focus {
+  background-color: #615048;
+}
+
+.about-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.about-button:disabled {
+  background-color: #e5e5e5;
+}
+
 .fav-button {
   background-color: #82b3d3;
 }
 
+.fav-button:hover {
+  background-color: #68A2CA;
+}
+
+.fav-button:focus {
+  background-color: #68A2CA;
+}
+
+.fav-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.fav-button:disabled {
+  background-color: #e5e5e5;
+}
+
 .fav-button-selected {
   background-color: #7db54f;
+}
+
+.fav-button-selected:hover {
+  background-color: #6C9E42;
+}
+
+.fav-button-selected:focus {
+  background-color: #6C9E42;
+}
+
+.fav-button-selected:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.fav-button-selected:disabled {
+  background-color: #e5e5e5;
 }
 
 .rating-button {
