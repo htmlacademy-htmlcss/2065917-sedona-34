@@ -208,6 +208,22 @@ body {
   background-color: #756157;
 }
 
+.header-button:hover {
+  background-color: #615048;
+}
+
+.header-button:focus {
+  background-color: #615048;
+}
+
+.header-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.header-button:disabled {
+  background-color: #e5e5e5;
+}
+
 .page-footer {
   background: #ffffff;
 }
@@ -250,12 +266,15 @@ body {
   display: flex;
   justify-content: center;
 }
-
+/* тут нужна помощь с высотой строки в инпуте! */
 .subscription-input {
+  box-sizing: border-box;
   display: block;
   width: 600px;
   padding: 20px 22px 19px;
   font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
   background-color: #f2f2f2;
   border: none;
   border-radius: 10px 0 0 10px;
@@ -276,6 +295,22 @@ body {
   line-height: 36px;
   background-color: #82b3d3;
   border-radius: 0 10px 10px 0;
+}
+
+.subscription-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscription-button:focus {
+  background-color: #68A2CA;
+}
+
+.subscription-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscription-button:disabled {
+  background-color: #e5e5e5;
 }
 
 .footer-container {
@@ -570,6 +605,22 @@ body {
   background-color: #756157;
 }
 
+.hotel-search-button:hover {
+  background-color: #615048;
+}
+
+.hotel-search-button:focus {
+  background-color: #615048;
+}
+
+.hotel-search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-search-button:disabled {
+  background-color: #e5e5e5;
+}
+
 /* catalog */
 
 .catalog-header {
@@ -823,6 +874,18 @@ body {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+}
+
+.hotel-card-link:hover .hotel-card-title {
+  color: #756157;
+}
+
+.hotel-card-link:focus .hotel-card-title {
+  color: #756157;
+}
+
+.hotel-card-link:active .hotel-card-title {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .hotel-card-type,
