@@ -114,7 +114,23 @@ body {
   color: #000000;
  }
 
- .navigation-current::after {
+ .navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:focus {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-current {
+  cursor: default;
+}
+
+.navigation-current::after {
   position: absolute;
   content: "";
   display: block;
@@ -123,35 +139,46 @@ body {
   bottom: -1px;
   height: 2px;
   background-color: #756157;
- }
+}
 
- .navigation-user .navigation-item {
+.navigation-user .navigation-item {
   padding: 0;
   margin: 0;
- }
+}
 
- .navigation-user .navigation-link {
+.navigation-user .navigation-link {
   box-sizing: border-box;
   width: 42px;
   height: 65px;
   margin: 0;
   padding: 0;
- }
-
-.navigation-search {
-  background-image: url("../images/icons/search.svg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.navigation-favorites {
-  background-image: url("../images/icons/favorite.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
- .favorites-counter {
+.navigation-user .navigation-link {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-icon {
+  fill: #000000;
+}
+
+.navigation-user .navigation-link:hover .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-user .navigation-link:focus .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-user .navigation-link:active .navigation-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.favorites-counter {
+  position: absolute;
   top: 15px;
   left: 24px;
   display: block;
@@ -167,7 +194,7 @@ body {
   color: #ffffff;
   background-color: #7db54f;
   border-radius: 10px;
- }
+}
 
 .header-button {
   display: block;
@@ -290,30 +317,6 @@ body {
   fill: rgba(104, 162, 202, 0.3);
 }
 
-/* .footer-social-list .vk::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 20px;
-  background: url("../images/icons/vk.svg") center no-repeat;
-}
-
-.footer-social-list .tg::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 20px;
-  background: url("../images/icons/telegram.svg") center no-repeat;
-}
-
-.footer-social-list .yt::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 20px;
-  background: url("../images/icons/youtube.svg") center no-repeat;
-} */
-
 .footer-phone {
   margin: 0 auto;
 }
@@ -329,8 +332,11 @@ body {
   color: #000000;
 }
 
-.footer-phone-link:hover,
-:focus {
+.footer-phone-link:hover {
+  color: #756157;
+}
+
+.footer-phone-link:focus {
   color: #756157;
 }
 
