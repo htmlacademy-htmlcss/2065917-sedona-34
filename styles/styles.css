@@ -653,20 +653,26 @@ body {
   font-weight: 400;
 }
 
-.breadcrumbs-item:first-child .breadcrumbs-link {
-  width: 12px;
-  height: 12px;
-  background: url("../images/icons/breadcrumbs-home.svg") center/cover no-repeat;
-}
-
 .breadcrumbs-item {
   display: flex;
   align-items: center;
   margin-right: 10px;
 }
 
+.breadcrumbs-icon {
+  fill: #ffffff;
+}
+
 .breadcrumbs-link {
   margin-right: 10px;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-current):hover {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-current):active {
+  opacity: 0.3;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
@@ -849,6 +855,19 @@ body {
   height: 48px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.layout-button:hover {
+  border-color: #000000;
+}
+
+.layout-button:focus {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.layout-button:active {
+  border-color: #000000;
 }
 
 .layout-button.layout-current {
@@ -1051,6 +1070,23 @@ body {
 .pagination-button.pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+  cursor: default;
+}
+
+.pagination-span {
+  cursor: default;
+}
+
+.pagination-button:not(.pagination-current, .pagination-span):hover {
+  background-color: #68A2CA;
+}
+
+.pagination-button:not(.pagination-current, .pagination-span):focus {
+  background-color: #68A2CA;
+}
+
+.pagination-button:not(.pagination-current, .pagination-span):active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .container-card-num {
@@ -1072,4 +1108,21 @@ body {
   background-color: transparent;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.control-select:hover {
+  border-color: #68A2CA;
+}
+
+.control-select:focus {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.control-select:active {
+  border-color: #3f5e72;
+}
+
+.control-select:disabled {
+  color: rgba(0, 0, 0, 0.3);
 }
