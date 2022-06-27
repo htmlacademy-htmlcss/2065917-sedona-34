@@ -808,11 +808,12 @@ body {
 
 .search-layout {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 56px;
 }
 
 .catalog-content-text {
+  align-self: center;
   margin: 0;
   margin-right: auto;
   font-size: 30px;
@@ -821,18 +822,30 @@ body {
   text-transform: uppercase;
 }
 
-.search-layout .control-select {
-  width: 290px;
-  margin-right: 78px;
+.control-select {
+  box-sizing: border-box;
+  display: block;
   padding: 12px 14px;
+  padding-right: 40px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #333333;
+  background-image: url("../images/icons/select-arrow.svg");
+  background-position: center right 18px;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  -moz-appearance: none;
+	-webkit-appearance: none;
+  appearance: none;
+}
+
+.search-layout .control-select {
+  width: 290px;
+  margin-right: 78px;
 }
 
 .layout-list {
@@ -1055,9 +1068,13 @@ body {
   list-style: none;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+
+}
+
 .pagination-button {
   display: block;
-  margin-right: 8px;
   width: 60px;
   height: 60px;
   font-size: 20px;
@@ -1095,19 +1112,14 @@ body {
   color: #333333;
 }
 
+.container-card-num p {
+  margin: 0;
+  padding: 0;
+}
+
 .container-card-num .control-select {
-  box-sizing: border-box;
   width: 160px;
   margin-left: 51px;
-  padding: 12px 14px;
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #333333;
-  background-color: transparent;
-  border: 2px solid #e5e5e5;
-  border-radius: 4px;
 }
 
 .control-select:hover {
