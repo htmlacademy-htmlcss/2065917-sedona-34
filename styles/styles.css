@@ -288,6 +288,21 @@ body {
   opacity: 0.6;
 }
 
+.subscription-input:hover {
+  background-color: #e6e6e6;
+}
+
+.subscription-input:focus {
+  outline: none;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 2px #83b3d3 inset;
+}
+
+.subscription-input:not(:placeholder-shown) {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px #000000 inset;
+}
+
 .subscription-button {
   min-width: 200px;
   padding: 12px 15px;
@@ -793,8 +808,8 @@ body {
   outline: 2px solid #83b3d3;
 }
 
-
 .button-reset:active {
+  outline: none;
   opacity: 0.3;
 }
 
@@ -1136,5 +1151,7 @@ body {
 }
 
 .control-select:disabled {
-  color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #000000;
+  color: #000000;
+  opacity: 0.3;
 }
