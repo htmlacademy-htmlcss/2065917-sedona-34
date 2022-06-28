@@ -878,6 +878,22 @@ a.navigation-link:active {
   opacity: 0.3;
 }
 
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #81b3d2, 0 0 0 2px #81b3d2 inset;
+}
+
+.range-input:active {
+  background-color: #756257;
+  border-color: #ffffff;
+  outline: none;
+  box-shadow: none;
+}
+
 .filter-buttons {
   display: flex;
   flex-direction: column;
