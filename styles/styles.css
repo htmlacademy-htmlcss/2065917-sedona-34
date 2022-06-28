@@ -717,13 +717,13 @@ a.navigation-link:active {
 .filter-column-left {
   display: grid;
   grid-template-columns: min-content minmax(auto, 150px);
-  grid-gap: 70px;
+  grid-gap: 71px;
 }
 
 .filter-column-right {
   display: grid;
   grid-template-columns: auto 160px;
-  grid-gap: 70px;
+  grid-gap: 71px;
 }
 
 .catalog-filter-group {
@@ -752,14 +752,85 @@ a.navigation-link:active {
   margin-bottom: 15px;
 }
 
-.control-checkbox {
-  margin: 0;
-  padding: 0;
+.control {
+  display: flex;
 }
 
-.control-radio {
-  margin: 0;
-  padding: 0;
+.custom-checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;;
+  margin-right: 19px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.control-label {
+  cursor: pointer;
+}
+
+.control-checkbox[type="checkbox"]:checked + .custom-checkbox::after {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/checkbox_tick.svg") transparent center no-repeat;
+  content: "";
+}
+
+.control:hover .custom-checkbox {
+  opacity: 0.6;
+}
+
+.control-checkbox:focus + .custom-checkbox {
+  opacity: 0.6;
+  outline: 3px solid #83b3d3;
+}
+
+.control-checkbox:active + .custom-checkbox {
+  opacity: 0.3;
+  outline: none;
+}
+
+.control-checkbox:disabled ~ .custom-checkbox,
+.control-checkbox:disabled ~ .control-label {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.custom-radio {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;;
+  margin-right: 19px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.control-radio[type="radio"]:checked + .custom-radio::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #3f5e72;
+  border-radius: 5px;
+  content: "";
+}
+
+.control-radio:focus ~ .custom-radio {
+  outline: 3px solid rgba(131, 179, 211, 0.6);
+}
+
+.control-radio:disabled ~ .custom-radio,
+.control-radio:disabled ~ .control-label {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .filter-buttons {
@@ -817,7 +888,7 @@ a.navigation-link:active {
 }
 
 .button-reset:focus {
-  outline: 2px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .button-reset:active {
