@@ -404,6 +404,10 @@ a.navigation-link:active {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.footer-about-link {
+  align-self: end;
+}
+
 .about-logo {
   fill: #000000;
 }
@@ -596,13 +600,13 @@ a.navigation-link:active {
 }
 
 .hotel-search {
-  padding: 91px 200px 93px;
+  padding: 89px 200px 93px;
   text-align: center;
 }
 
 .hotel-search-title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
