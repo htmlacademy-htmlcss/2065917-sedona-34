@@ -840,11 +840,14 @@ a.navigation-link:active {
 
 .range-input-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  width: 288px;
 }
 
 .range-label-wrapper {
   position: relative;
   display: flex;
+  margin-bottom: 28px;
 }
 
 .range-input {
@@ -883,6 +886,7 @@ a.navigation-link:active {
 }
 
 .range-input:focus {
+  border-color: #ffffff;
   outline: none;
   box-shadow: 0 0 0 2px #81b3d2, 0 0 0 2px #81b3d2 inset;
 }
@@ -893,6 +897,62 @@ a.navigation-link:active {
   outline: none;
   box-shadow: none;
 }
+
+.range-scale {
+  position: relative;
+  align-self: start;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-thumb {
+  position: absolute;
+  top: -8px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-thumb.thumb-min {
+  left: 0;
+}
+
+.range-thumb.thumb-max {
+  right: 0;
+}
+
+.range-thumb:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-thumb:focus {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83b3d3;
+}
+
+.range-thumb:active {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  outline: 2px solid #83b3d3;
+}
+
+
+
+
+
+
+
+
 
 .filter-buttons {
   display: flex;
@@ -963,7 +1023,7 @@ a.navigation-link:active {
 }
 
 .catalog-content {
-  padding: 53px 71px 25px 73px;
+  padding: 55px 71px 25px 73px;
 }
 
 .search-layout {
