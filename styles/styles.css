@@ -652,6 +652,7 @@ a.navigation-link:active {
 .catalog-header {
   padding: 70px;
   padding-top: 35px;
+  padding-right: 71px;
   color: #ffffff;
   background: url("../images/filter-background.jpg") #2d4247 center no-repeat;
   background-size: cover;
@@ -723,7 +724,7 @@ a.navigation-link:active {
 .filter-column-right {
   display: grid;
   grid-template-columns: auto 160px;
-  grid-gap: 71px;
+  grid-gap: 70px;
 }
 
 .catalog-filter-group {
@@ -831,6 +832,50 @@ a.navigation-link:active {
 .control-radio:disabled ~ .control-label {
   opacity: 0.3;
   pointer-events: none;
+}
+
+.filter-column-right .catalog-filter-title {
+  margin-bottom: 34px;
+}
+
+.range-input-wrapper {
+  display: flex;
+}
+
+.range-label-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.range-input {
+  display: block;
+  box-sizing: border-box;
+  width: 145px;
+  margin: 0;
+  padding: 11px 17px 10px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px 0 0 4px;
+  appearance: textfield;
+}
+
+.range-label-wrapper + .range-label-wrapper .range-input {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-label-wrapper + .range-label-wrapper {
+  margin-left: -2px;
+}
+
+.range-label {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  opacity: 0.3;
 }
 
 .filter-buttons {

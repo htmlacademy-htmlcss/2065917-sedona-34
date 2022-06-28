@@ -131,20 +131,17 @@
               <div class="filter-column-right">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <div class="container-range">
-                    <input class="container-range-input" type="number" inputmode="numeric" name="price-range-min"
-                      id="price-range-min" min="0" max="12999" step="1" value="0">
-                    <label class="container-range-label" for="price-range-min">от</label>
-                    <input class="container-range-input" type="number" inputmode="numeric" name="price-range-max"
-                      id="price-range-max" min="1" max="13000" step="1" value="9000">
-                    <label class="container-range-label" for="price-range-max">до</label>
+                  <div class="range-input-wrapper">
+                    <div class="range-label-wrapper">
+                      <input class="range-input" type="number" inputmode="numeric" name="price-range-min" id="price-range-min" min="0" max="12999" step="1" value="0">
+                      <label class="range-label" for="price-range-min">от</label>
+                    </div>
+                    <div class="range-label-wrapper">
+                      <input class="range-input" type="number" inputmode="numeric" name="price-range-max"
+                        id="price-range-max" min="1" max="13000" step="1" value="9000">
+                      <label class="range-label" for="price-range-max">до</label>
+                    </div>
                   </div>
-                  <label class="control">
-                    <input class="control-range" type="range" name="price-range-min" min="0" max="12999" value="0">
-                  </label>
-                  <label class="control">
-                    <input class="control-range" type="range" name="price-range-max" min="1" max="13000" value="9000">
-                  </label>
                 </fieldset>
                 <div class="filter-buttons">
                   <button class="button-accept button" type="submit">Применить</button>
