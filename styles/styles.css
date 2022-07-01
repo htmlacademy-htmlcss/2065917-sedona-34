@@ -81,10 +81,12 @@ body {
   position: relative;
   display: block;
   margin-bottom: -5px;
+  transition: opacity ease-in 0.1s, transform ease-in 0.1s;
+
 }
 
-a .header-logo:hover {
-  opacity: 0.6;
+a.navigation-logo:hover .header-logo {
+  transform: scale(1.1) translateY(3px);
 }
 
 a .header-logo:active {
@@ -293,6 +295,7 @@ a.navigation-link:active {
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
   background-color: #f2f2f2;
   border: none;
   border-radius: 10px 0 0 10px;
@@ -319,10 +322,10 @@ a.navigation-link:active {
 .subscription-input:focus {
   outline: none;
   background-color: #e6e6e6;
-  box-shadow: 0 0 0 2px #83b3d3 inset;
+  box-shadow: 0 0 0 3px #83b3d3 inset;
 }
 
-.subscription-input:not(:placeholder-shown) {
+.subscription-input:focus:not(:placeholder-shown) {
   background-color: #ffffff;
   box-shadow: 0 0 0 2px #000000 inset;
 }
@@ -937,7 +940,7 @@ a.navigation-link:active {
   box-shadow: 0 0 0 2px #81b3d2, 0 0 0 2px #81b3d2 inset;
 }
 
-.range-input:active {
+.range-input:focus:not(:placeholder-shown) {
   background-color: #756257;
   border-color: #ffffff;
   outline: none;
