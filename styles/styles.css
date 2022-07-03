@@ -676,10 +676,6 @@ a.navigation-link:active {
 
 /* modal */
 
-.modal-opened {
-  overflow: hidden;
-}
-
 .modal-container {
   position: fixed;
   display: flex;
