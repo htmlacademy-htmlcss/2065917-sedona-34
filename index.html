@@ -172,28 +172,28 @@
       </footer>
     </div>
     <div class="modal-container modal-opened" aria-hidden="true">
-      <div class="modal">
+      <div class="modal" aria-modal="true">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-        <button class="modal-close" type="button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть.</span>
-          <svg class="close-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/></svg>
+          <img class="close-icon" src="images/icons/close-icon.svg" width="13" height="13" aria-hidden="true">
         </button>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="modal-label" for="date-arriving">Дата заезда:</label>
           <div class="date-wrapper">
-            <input class="modal-date" type="text" name="date-arriving" id="date-arriving" value="27 апреля 2020">
+            <input class="modal-date" type="text" name="date-arriving" id="date-arriving" value="27 апреля 2020" placeholder="Укажите дату">
             <p class="input-comment input-error">Мы не можем отправить вас в прошлое.</p>
           </div>
           <label class="modal-label" for="date-departure">Дата выезда:</label>
           <div class="date-wrapper">
-            <input class="modal-date" type="text" name="date-departure" id="date-departure" value="1 сентября 2021">
+            <input class="modal-date" type="text" name="date-departure" id="date-departure" value="1 сентября 2021" placeholder="Укажите дату">
             <p class="input-comment input-alright">На эти даты есть свободные номера. Пока есть.</p>
           </div>
           <label class="modal-label" for="counter-adult">Взрослые:</label>
           <div class="count-wrapper adult-wrapper">
-            <input class="modal-count" type="number" name="counter-adult" id="counter-adult" value="2" placeholder="1" min="1" max="99" step="1">
             <button class="modal-count-button button-minus" type="button"></button>
             <button class="modal-count-button button-plus" type="button"></button>
+            <input class="modal-count" type="number" name="counter-adult" id="counter-adult" value="2" placeholder="1" min="1" max="99" step="1">
           </div>
           <span class="label-wrapper">
             <label class="modal-label" for="counter-child">Дети:</label>
@@ -205,9 +205,9 @@
             </span>
           </span>
           <div class="count-wrapper child-wrapper">
-            <input class="modal-count" type="number" name="counter-child" id="counter-child" value="1" placeholder="0" min="0" max="99" step="1">
             <button class="modal-count-button button-minus" type="button"></button>
             <button class="modal-count-button button-plus" type="button"></button>
+            <input class="modal-count" type="number" name="counter-child" id="counter-child" value="1" placeholder="0" min="0" max="99" step="1">
           </div>
 
           <button class="modal-form-button button" type="submit">Найти</button>

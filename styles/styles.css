@@ -713,7 +713,7 @@ a.navigation-link:active {
   text-transform: uppercase;
 }
 
-.modal-close {
+.modal-close-button {
   position: absolute;
   top: 55px;
   right: 72px;
@@ -727,6 +727,26 @@ a.navigation-link:active {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  box-shadow: none;
+  outline: none;
+}
+
+.modal-close-button:active .close-icon {
+  opacity: 0.3;
+}
+
 .modal-form {
   display: grid;
   grid-template-columns: 136px 133px 118px 133px;
@@ -735,6 +755,7 @@ a.navigation-link:active {
 }
 
 .modal-label {
+  justify-self: start;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -775,6 +796,26 @@ a.navigation-link:active {
   font-weight: 400;
   color: #000000;
   opacity: 0.6;
+}
+
+.modal-date:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-date:focus {
+  outline: none;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.modal-date:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px #000000 inset;
+}
+
+.modal-date:disabled {
+  background-color: #82b3d3;
+  pointer-events: none;
 }
 
 .input-comment {
@@ -832,6 +873,27 @@ a.navigation-link:active {
   margin: 0;
 }
 
+.modal-count:hover,
+.modal-count-button:hover ~ .modal-count:not([disabled]) {
+  background-color: #e6e6e6;
+}
+
+.modal-count:focus {
+  outline: none;
+  background-color: #e6e6e6;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.modal-count:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px #000000 inset;
+}
+
+.modal-count:disabled {
+  background-color: #82b3d3;
+  pointer-events: none;
+}
+
 .modal-count-button {
   position: absolute;
   top: 12px;
@@ -840,6 +902,7 @@ a.navigation-link:active {
   margin: 0;
   padding: 0;
   border: none;
+  border-radius: 4px;
   background-color: transparent;
   background-position: center;
   background-size: 13px;
@@ -856,6 +919,27 @@ a.navigation-link:active {
 .modal-count-button.button-plus {
   right: 12px;
   background-image: url("../images/icons/plus.svg");
+}
+
+.modal-count-button:hover {
+  opacity: 1;
+}
+
+.modal-count-button:focus {
+  box-shadow: 0 0 0 3px #83B3D3 inset;
+  opacity: 1;
+  outline: none;
+}
+
+.modal-count-button:active {
+  box-shadow: none;
+  opacity: 0.2;
+  outline: none;
+}
+
+.modal-count-button:disabled {
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .label-wrapper {
@@ -878,13 +962,13 @@ a.navigation-link:active {
   background: url("../images/icons/info.svg") #83b3d3 center/auto no-repeat;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .tooltip-box {
   position: absolute;
-  z-index: 5;
   left: 18px;
-  display: block;
+  visibility: hidden;
   box-sizing: border-box;
   width: 256px;
   margin: 0;
@@ -898,8 +982,10 @@ a.navigation-link:active {
   color: #ffffff;
   background-color: #333333;
   border-radius: 10px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
 .tooltip-box::before {
@@ -911,8 +997,24 @@ a.navigation-link:active {
   width: 15px;
   height: 15px;
   background-color: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   transform: rotate(45deg);
+}
+
+.tooltip-button:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip-button:focus {
+  background-color: #68A2CA;
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.tooltip-button:hover + .tooltip-box,
+.tooltip-button:focus + .tooltip-box {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal-form-button {
@@ -923,6 +1025,28 @@ a.navigation-link:active {
   line-height: 36px;
   background-color: #83b3d3;
   border-radius: 10px;
+}
+
+.modal-form-button:hover {
+  background-color: #68A2CA;
+}
+
+.modal-form-button:focus {
+  background-color: #68A2CA;
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.modal-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+  box-shadow: none;
+  outline: none;
+}
+
+.modal-form-button:disabled {
+  background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 /* catalog */
@@ -1054,7 +1178,7 @@ a.navigation-link:active {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("../images/icons/checkbox_tick.svg") transparent center no-repeat;
+  background: url("../images/icons/checkbox-tick.svg") transparent center no-repeat;
   content: "";
 }
 
