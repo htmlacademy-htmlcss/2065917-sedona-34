@@ -687,8 +687,6 @@ a.navigation-link:active {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   background-color: rgba(242, 242, 242, 0.8);
   opacity: 0;
   transition: opacity 0.5s, visibility 0.5s;
@@ -701,7 +699,6 @@ a.navigation-link:active {
 
 .modal {
   position: relative;
-  z-index: 5;
   box-sizing: border-box;
   width: 715px;
   margin: auto;
