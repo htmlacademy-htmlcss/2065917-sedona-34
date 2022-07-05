@@ -723,6 +723,9 @@ a.navigation-link:active {
   position: absolute;
   top: 55px;
   right: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 53px;
   height: 53px;
   margin: 0;
