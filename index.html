@@ -183,19 +183,19 @@
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="modal-label" for="date-arriving">Дата заезда:</label>
           <div class="date-wrapper">
-            <input class="modal-date" type="text" name="date-arriving" id="date-arriving" value="27 апреля 2020" placeholder="Укажите дату">
+            <input class="modal-date" type="text" name="date-arriving" id="date-arriving" value="27 апреля 2020" placeholder="Укажите дату" required>
             <p class="input-comment input-error">Мы не можем отправить вас в прошлое.</p>
           </div>
           <label class="modal-label" for="date-departure">Дата выезда:</label>
           <div class="date-wrapper">
-            <input class="modal-date" type="text" name="date-departure" id="date-departure" value="1 сентября 2021" placeholder="Укажите дату">
+            <input class="modal-date" type="text" name="date-departure" id="date-departure" value="1 сентября 2021" placeholder="Укажите дату" required>
             <p class="input-comment input-alright">На эти даты есть свободные номера. Пока есть.</p>
           </div>
           <label class="modal-label" for="counter-adult">Взрослые:</label>
           <div class="count-wrapper adult-wrapper">
             <button class="modal-count-button button-minus" type="button"></button>
             <button class="modal-count-button button-plus" type="button"></button>
-            <input class="modal-count" type="number" name="counter-adult" id="counter-adult" value="2" placeholder="1" min="1" max="99" step="1">
+            <input class="modal-count" type="number" name="counter-adult" id="counter-adult" value="2" placeholder="1" min="1" max="99" step="1" required>
           </div>
           <div class="label-wrapper">
             <label class="modal-label" for="counter-child">Дети:</label>
