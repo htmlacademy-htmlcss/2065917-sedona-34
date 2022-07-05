@@ -180,22 +180,6 @@ a.navigation-link:active {
   align-items: center;
 }
 
-.navigation-icon {
-  fill: #000000;
-}
-
-.navigation-user .navigation-link:hover .navigation-icon {
-  fill: #756157;
-}
-
-.navigation-user .navigation-link:focus .navigation-icon {
-  fill: #756157;
-}
-
-.navigation-user .navigation-link:active .navigation-icon {
-  fill: rgba(117, 97, 87, 0.3);
-}
-
 .favorites-counter {
   position: absolute;
   top: 15px;
