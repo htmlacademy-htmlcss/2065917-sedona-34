@@ -354,6 +354,7 @@ a.navigation-link:active {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  width: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -385,7 +386,9 @@ a.navigation-link:active {
 }
 
 .footer-phone {
+  width: 580px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .footer-phone-link {
@@ -412,7 +415,10 @@ a.navigation-link:active {
 }
 
 .footer-about-link {
-  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 213px;
 }
 
 .about-logo {
