@@ -1159,11 +1159,14 @@ a.navigation-link:active {
 }
 
 .custom-checkbox {
+  position: relative;
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   margin-left: 1px;;
   margin-right: 19px;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
@@ -1174,7 +1177,10 @@ a.navigation-link:active {
 }
 
 .control-checkbox[type="checkbox"]:checked + .custom-checkbox::after {
+  position: absolute;
   display: block;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   background: url("../images/icons/checkbox-tick.svg") transparent center no-repeat;
@@ -1204,10 +1210,12 @@ a.navigation-link:active {
 .custom-radio {
   position: relative;
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   margin-left: 1px;;
   margin-right: 19px;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
   cursor: pointer;
@@ -1382,7 +1390,7 @@ a.navigation-link:active {
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  margin-top: 60px;
 }
 
 .button-accept {
