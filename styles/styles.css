@@ -1742,6 +1742,8 @@ a.navigation-link:active {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
+  width: 540px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1792,8 +1794,10 @@ a.navigation-link:active {
 }
 
 .container-card-num p {
+  width: 300px;
   margin: 0;
   padding: 0;
+  text-align: right;
 }
 
 .container-card-num .control-select {
