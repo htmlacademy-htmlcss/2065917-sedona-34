@@ -1139,7 +1139,7 @@ a.navigation-link:active {
 
 .filter-column-right {
   display: grid;
-  grid-template-columns: auto 160px;
+  grid-template-columns: min-content minmax(auto, 160px);
   grid-gap: 70px;
 }
 
