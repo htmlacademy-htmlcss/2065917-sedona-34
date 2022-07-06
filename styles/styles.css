@@ -70,6 +70,7 @@ body {
 
 .navigation {
   display: flex;
+  align-items: flex-start;
 }
 
 .navigation-logo {
@@ -203,7 +204,10 @@ a.navigation-link:active {
   display: block;
   box-sizing: border-box;
   min-width: 160px;
+  max-width: 240px;
   margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 9px 15px 8px;
   font-size: 16px;
   line-height: 20px;
@@ -321,6 +325,7 @@ a.navigation-link:active {
 
 .subscription-button {
   min-width: 200px;
+  max-width: 300px;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
@@ -354,6 +359,7 @@ a.navigation-link:active {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  width: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -385,7 +391,9 @@ a.navigation-link:active {
 }
 
 .footer-phone {
+  width: 580px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .footer-phone-link {
@@ -412,7 +420,10 @@ a.navigation-link:active {
 }
 
 .footer-about-link {
-  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 213px;
 }
 
 .about-logo {
@@ -505,27 +516,32 @@ a.navigation-link:active {
 
 .advantages-accent {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .accent-odd::after {
   content: "";
   display: block;
-  width: 800px;
-  height: auto;
-  background: url("../images/town.jpg") center/cover no-repeat;
+  flex-grow: 1;
+  min-width: 400px;
+  min-height: 384px;
+  background: url("../images/advantages-town.jpg") center/cover no-repeat;
 }
 
 .accent-even::before {
   content: "";
   display: block;
-  width: 800px;
-  height: auto;
-  background: url("../images/canyon.jpg") center/cover no-repeat;
+  flex-grow: 1;
+  min-width: 400px;
+  min-height: 384px;
+  background: url("../images/advantages-canyon.jpg") center/cover no-repeat;
 }
 
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -534,7 +550,7 @@ a.navigation-link:active {
 
 .advantages-title {
   width: 180px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 30px;
   padding: 0;
   font-size: 24px;
@@ -544,7 +560,8 @@ a.navigation-link:active {
 }
 
 .advantages-num {
-  margin: auto 0 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   padding: 0;
 }
 
@@ -570,6 +587,7 @@ a.navigation-link:active {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   width: 400px;
   min-height: 384px;
 }
@@ -587,6 +605,7 @@ a.navigation-link:active {
   display: block;
   width: 100%;
   height: 76px;
+  margin-bottom: 26px;
   background: url("../images/icons/housing.svg") center/auto no-repeat;
 }
 
@@ -595,6 +614,7 @@ a.navigation-link:active {
   display: block;
   width: 100%;
   height: 76px;
+  margin-bottom: 26px;
   background: url("../images/icons/food.svg") center/auto no-repeat;
 }
 
@@ -603,6 +623,7 @@ a.navigation-link:active {
   display: block;
   width: 100%;
   height: 76px;
+  margin-bottom: 26px;
   background: url("../images/icons/souvenirs.svg") center/auto no-repeat;
 }
 
@@ -1118,7 +1139,7 @@ a.navigation-link:active {
 
 .filter-column-right {
   display: grid;
-  grid-template-columns: auto 160px;
+  grid-template-columns: min-content minmax(auto, 160px);
   grid-gap: 70px;
 }
 
@@ -1153,11 +1174,14 @@ a.navigation-link:active {
 }
 
 .custom-checkbox {
+  position: relative;
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   margin-left: 1px;;
   margin-right: 19px;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
@@ -1168,7 +1192,10 @@ a.navigation-link:active {
 }
 
 .control-checkbox[type="checkbox"]:checked + .custom-checkbox::after {
+  position: absolute;
   display: block;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   background: url("../images/icons/checkbox-tick.svg") transparent center no-repeat;
@@ -1198,10 +1225,12 @@ a.navigation-link:active {
 .custom-radio {
   position: relative;
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 20px;
   margin-left: 1px;;
   margin-right: 19px;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
   cursor: pointer;
@@ -1376,7 +1405,7 @@ a.navigation-link:active {
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  margin-top: 60px;
 }
 
 .button-accept {
@@ -1713,6 +1742,8 @@ a.navigation-link:active {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
+  width: 540px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1763,8 +1794,10 @@ a.navigation-link:active {
 }
 
 .container-card-num p {
+  width: 300px;
   margin: 0;
   padding: 0;
+  text-align: right;
 }
 
 .container-card-num .control-select {
