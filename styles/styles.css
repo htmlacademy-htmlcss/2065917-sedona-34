@@ -512,7 +512,7 @@ a.navigation-link:active {
   display: block;
   width: 800px;
   height: auto;
-  background: url("../images/town.jpg") center/cover no-repeat;
+  background: url("../images/advantages-town.jpg") center/cover no-repeat;
 }
 
 .accent-even::before {
@@ -520,7 +520,7 @@ a.navigation-link:active {
   display: block;
   width: 800px;
   height: auto;
-  background: url("../images/canyon.jpg") center/cover no-repeat;
+  background: url("../images/advantages-canyon.jpg") center/cover no-repeat;
 }
 
 .advantages-list {
